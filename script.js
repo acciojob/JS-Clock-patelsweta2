@@ -10,9 +10,9 @@ function updateClock() {
 	const minHand = document.querySelector('.min-hand');
 	const secondHand = document.querySelector('.second-hand');
 
-	const hourRotation = 360/12 * hours + 360/12 *(minutes/60);
-	const minRotation = 360/60 * minutes + 360/60 *(seconds/60);
-	const secondRotation = 360/60 * seconds;
+	const hourRotation = (360/12) * (hours+minutes/60);
+	const minRotation = (360/60) * (minutes + seconds/60) ;
+	const secondRotation = (360/60) * seconds;
 
 	hourHand.style.transform = `rotate(${hourRotation}deg)`;
 	minHand.style.transform = `rotate(${minRotation}deg)`;
